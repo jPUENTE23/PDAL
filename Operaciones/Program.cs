@@ -20,9 +20,6 @@ namespace Operaciones
             Console.WriteLine("La multiplicacion es: " + (num1 * num2));
             Console.WriteLine("La division es: " + (num1 / num2));
 
-            Console.WriteLine("Prueba");
-
-
         }
     }
 }
