@@ -11,7 +11,7 @@ namespace Arrays
         static void Main(string[] args)
         {
 
-            //CREACION DE UN ARREGLO INDICANDO UNA LONGITUD
+            /*//CREACION DE UN ARREGLO INDICANDO UNA LONGITUD
 
             int[] usuarios = new int[10] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
             Console.WriteLine(usuarios[2]);
@@ -44,14 +44,40 @@ namespace Arrays
                                                 { 4, 8 } };
             int filas, columnas;
 
+
+            // PRIMERO RECORREL EL NUMERO DE FILAS DE ARRAY
             for (filas = 0; filas < 5; filas++)
             {
+                // LUEGO RECORREMOS LAS COLUMNAS DEL ARRAY
                 for (columnas = 0; columnas<2; columnas++)
                 {
                     Console.WriteLine("Resultados[{0},{1}] = {2}", filas, columnas, resultados[filas, columnas]);
                 }
             }
             Console.ReadKey();
+
+
+            // ARRAY IMPLICITO
+            /* En un array implicito podemos crearlo sin tener que indicar el tipo de dato que va 
+            manejar, pero eso no indica que podemos ingresar datos de tipo string y int juntos en uno
+            , justo como se muestra a continuacion*/
+
+            // var datos = new[] {"Jorge","Luis",21};
+            /*
+            var valores = new[] { 10, 21, 30, 54.50 };// Tipo de dato Double
+            */
+
+            dynamic[] alumnos = { "Jorge", 2036366 };
+            dynamic[] matriz = new dynamic[] {};
+            matriz.Append(matriz);
+
+            foreach (string valor in matriz)
+            {
+                Console.WriteLine(valor);
+                Console.ReadLine();
+            }
+            
+            
         }
     }
 }
