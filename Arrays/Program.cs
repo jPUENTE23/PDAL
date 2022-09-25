@@ -11,7 +11,7 @@ namespace Arrays
         static void Main(string[] args)
         {
 
-            /*//CREACION DE UN ARREGLO INDICANDO UNA LONGITUD
+            //CREACION DE UN ARREGLO INDICANDO UNA LONGITUD
 
             int[] usuarios = new int[10] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
             Console.WriteLine(usuarios[2]);
@@ -24,19 +24,25 @@ namespace Arrays
             Console.ReadLine();
 
 
+            // INTERECCION DINAMICA CON UN ARREGLO
             int[] tabla = new int[10];
             int valorA, valorB;
 
             for (valorA = 0; valorA < 10; valorA++)
             {
                 tabla[valorA] = valorA + 100;
+                Console.WriteLine("Valor: {0}", tabla[valorA]);
             }
+            
             for (valorB = 0; valorB < 10; valorB++)
             {
                 Console.WriteLine("Elemento[{0}] = {1}", valorB, tabla[valorB]);
             }
             Console.ReadKey();
 
+
+
+            // CAREACION DE UN ARREGLO BIDIMENCIONAL
             int[,] resultados = new int[5, 2] { { 0, 0 }, 
                                                 { 1, 2 }, 
                                                 { 2, 4 }, 
@@ -45,6 +51,8 @@ namespace Arrays
             int filas, columnas;
 
 
+
+            //INTERECCION CON UN ARREGLO BIDIMENCIONAL
             // PRIMERO RECORREL EL NUMERO DE FILAS DE ARRAY
             for (filas = 0; filas < 5; filas++)
             {
@@ -63,20 +71,7 @@ namespace Arrays
             , justo como se muestra a continuacion*/
 
             // var datos = new[] {"Jorge","Luis",21};
-            /*
-            var valores = new[] { 10, 21, 30, 54.50 };// Tipo de dato Double
-            */
-
-            dynamic[] alumnos = { "Jorge", 2036366 };
-            dynamic[] matriz = new dynamic[] {};
-            matriz.Append(matriz);
-
-            foreach (string valor in matriz)
-            {
-                Console.WriteLine(valor);
-                Console.ReadLine();
-            }
-            
+            /**/            
             
         }
     }

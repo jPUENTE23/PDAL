@@ -13,7 +13,6 @@ namespace Listas
 
             //CREACION DE UNA LISTA
             List<string> Nombres = new List<string>();
-            List<string> listamatriz = new List<string>();
 
             Console.WriteLine("Ingresa tu primer nombre");
             string primerNombre = Console.ReadLine();
@@ -24,16 +23,30 @@ namespace Listas
             Nombres.Add(primerNombre);
             Nombres.Add(apellidos);
 
-            Console.WriteLine(Nombres);
-
-
             // RECORREO UNA LISTA
             foreach (string valor in Nombres)
             {
                 Console.WriteLine(valor);
             }
 
+            /*También podemos crear una lista con datos previos, para ello, utilizamos 
+             * la sintaxis similar a los arreglos:*/
+            List<string> personajes = new List<string>() 
+            { 
+                "Cecil",
+                "Rosa",
+                "Kayn"
+            
+            };
+
+            foreach(string datos in personajes)
+            {
+                Console.WriteLine("Nombre: {0}", datos);
+            }
+
+
             //LISTAS COMPLEJAS
+
             /*Así como los arreglos bidimensionales, también podemos utilizar listas para 
             almacenar múltiples datos de un mismo tipo, para ello, necesitamos crear una instancia del 
             objeto del tipo de la lista en cuestión, veamos un ejemplo.*/

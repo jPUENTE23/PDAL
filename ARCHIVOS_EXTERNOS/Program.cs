@@ -29,23 +29,42 @@ namespace ARCHIVOS_EXTERNOS
 
             File.AppendAllText(path, character + "\n");
 
-            var data = new Character[]
+            /*var data = new Character[]
             {
                 new Character() { Level = 15, Name = "Cloud", Job = "Ex-Soldier" },
                 new Character() { Level = 12, Name = "Tifa", Job = "Monk" },
             };
 
-            //data.ExportToTextFile(@"C:\Users\User1\Desktop\PAL\Characters.txt", ' ');
+            data.ExportToTextFile(@"C:\Users\User1\Desktop\PAL\Characters.txt", ' ');*/
 
         }
 
 
-        class Character
+        /*class Character
         {
             public int Level { get; set; }
             public string Name { get; set; }
             public string Job { get; set; }
-        }
+
+            static void ExportToTextFile<T>(this IEnumerable<T> data, string FileName, char ColumnSeperator)
+            {
+                using (var sw = File.CreateText(FileName))
+                {
+                    var plist = typeof(T).GetProperties().Where(p => p.CanRead && (p.PropertyType.IsValueType || p.PropertyType == typeof(string)) && p.GetIndexParameters().Length == 0).ToList();
+                    if (plist.Count > 0)
+                    {
+                        var seperator = ColumnSeperator.ToString();
+                        sw.WriteLine(string.Join(seperator, plist.Select(p => p.Name)));
+                        foreach (var item in data)
+                        {
+                            var values = new List<object>();
+                            foreach (var p in plist) values.Add(p.GetValue(item, null));
+                            sw.WriteLine(string.Join(seperator, values));
+                        }
+                    }
+                }
+            }
+        }*/
 
     }
 }
